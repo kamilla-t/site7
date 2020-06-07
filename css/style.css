@@ -1,0 +1,753 @@
+@charset "utf-8";
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    color: #333;
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-size: 1em;
+    line-height: 135%;
+    float: left;
+    font-weight: 400;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    width: auto\9;
+    /*ie8 */
+}
+
+a {
+    color: #d38484;
+    text-decoration: none;
+    -webkit-transition: all.6s ease;
+    -moz-transition: all.6s ease;
+    -o-transition: all.6s ease;
+    -ms-transition: all.6s ease;
+    transition: all.6s ease;
+}
+
+a:hover {
+    color: #efdea0;
+}
+
+a,
+a:hover {
+    -webkit-transition: all.6s ease;
+    -moz-transition: all.6s ease;
+    -o-transition: all.6s ease;
+    -ms-transition: all.6s ease;
+    transition: all.6s ease;
+}
+
+.clear {
+    clear: both;
+}
+
+
+/* Стили для шапки */
+
+header {
+    width: 98%;
+    float: left;
+    padding: 1%;
+    background-color: #fafafa;
+    border-bottom: 2px solid silver;
+}
+
+header #logo {
+    width: 30%;
+    float: left;
+}
+
+header #logo img {
+    width: 10%;
+}
+
+header #logo a {
+    color: #302f2f;
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
+    font-size: 25px;
+    font-weight: normal;
+    font-style: italic;
+    text-align: end;
+}
+
+header #logo a:hover {
+    color: #EC4067;
+}
+
+header #menuHead {
+    width: 34%;
+    float: left;
+}
+
+header #menuHead div {
+    float: left;
+    padding: 15px;
+    border-radius: 5px;
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
+    font-size: 18px;
+    font-weight: normal;
+    text-transform: uppercase;
+    color: rgb(31, 31, 31);
+}
+
+header #menuHead div:hover {
+    color: #EC4067;
+}
+
+
+/* Стили для кнопки */
+
+header #feedback .button {
+    color: white;
+    /* цвет текста */
+    text-decoration: none;
+    /* убирать подчёркивание у ссылок */
+    user-select: none;
+    /* убирать выделение текста */
+    background: #EC4067;
+    padding: .5em 1em;
+    /* отступ от текста */
+    outline: none;
+    /* убирать контур в Mozilla */
+    display: inline-block;
+    border-width: 2px 0;
+    border-style: solid none;
+    border-color: #EC4067;
+    border-radius: 6px;
+    transition: 0.2s;
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
+    font-size: 18px;
+    font-weight: bolder;
+}
+
+header #feedback .button:hover {
+    background: rgb(243, 113, 143);
+}
+
+
+/* при наведении курсора мышки */
+
+header #feedback .button:active {
+    background: rgb(243, 113, 143);
+}
+
+
+/* Стили для всего документа */
+
+#wrapper {
+    width: 80;
+    margin-left: 10%;
+    float: left;
+}
+
+
+/* Стили для левой колонки */
+
+@media(min-width: 800px) {
+    #wrapper #leftCol {
+        width: 70%;
+        margin-right: 10%;
+        float: left;
+    }
+}
+
+@media(max-width: 799px) {
+    #wrapper #leftCol {
+        width: 90%;
+        margin-right: 5%;
+        float: left;
+    }
+}
+
+#wrapper #leftCol #bigArticle {
+    width: 78%;
+    margin-left: 10%;
+    background-color: #f6f6f6;
+    padding: 1%;
+}
+
+#wrapper #leftCol #bigArticle img,
+#wrapper #leftCol .article img {
+    width: 100%;
+    float: left;
+    margin-bottom: 10px;
+}
+
+#wrapper #leftCol #bigArticle h2,
+#wrapper #leftCol .article h2 {
+    font-weight: normal;
+    font-size: 1.4em;
+    color: #636363;
+    font-family: Comic Sans MS, sans-serif;
+}
+
+#wrapper #leftCol #bigArticle p,
+#wrapper #leftCol .article p {
+    width: 98%;
+    margin-left: 2%;
+}
+
+#wrapper #leftCol #bigArticle div,
+#wrapper #leftCol .article div {
+    padding: 5px;
+    border-radius: 5px;
+    background-color: #878787;
+    color: #fff;
+    width: 10%;
+    text-align: center;
+    margin-top: 10px;
+}
+
+#wrapper #leftCol #bigArticle div:hover,
+#wrapper #leftCol .article div:hover {
+    background-color: #a2a2a2;
+}
+
+#wrapper #leftCol .article {
+    width: 40%;
+    margin-left: 5%;
+    background-color: #f6f6f6;
+    padding: 1%;
+    float: left;
+}
+
+#wrapper #leftCol .article div {
+    width: 20%;
+}
+
+#wrapper #leftCol input {
+    width: 25%;
+    margin-left: 40%;
+    float: left;
+    border-radius: 5px;
+    border: 2px solid silver;
+    padding: 5px;
+    color: #EC4067;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+#wrapper #leftCol input:focus,
+#wrapper #leftCol textarea:focus {
+    border: 2px solid silver;
+}
+
+#wrapper #leftCol input#done:hover {
+    border: 2px solid #EC4067;
+    cursor: pointer;
+}
+
+#wrapper #leftCol textarea {
+    width: 50%;
+    margin-left: 25%;
+    float: left;
+    border-radius: 5px;
+    border: 2px solid silver;
+    padding: 20px;
+    color: #EC4067;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+    resize: none;
+}
+
+#wrapper #leftCol #messageShow {
+    font-size: 1.2em;
+    float: left;
+    color: red;
+    width: 100%;
+    text-align: center;
+}
+
+
+/* Стили для правой колонки */
+
+@media(min-width: 800px) {
+    #wrapper #rightCol {
+        width: 20%;
+        float: left;
+    }
+}
+
+@media(max-width: 799px) {
+    #wrapper #rightCol {
+        width: 80%;
+        margin-left: 5%;
+        float: left;
+    }
+}
+
+#wrapper #rightCol .banner {
+    width: 80%;
+    float: left;
+    margin-bottom: 20px;
+    border: 2px solid silver;
+    box-sizing: border-box;
+    margin-top: 20px;
+}
+
+
+/* Стили для Footer */
+
+footer {
+    width: 98%;
+    float: left;
+    padding: 1%;
+    border-top: 2px solid silver;
+    margin-top: 10px;
+    background-color: #fafafa;
+}
+
+footer #social {
+    float: left;
+    width: 50%;
+}
+
+footer #social img {
+    width: 30px;
+    height: 30px;
+    float: left;
+    margin-right: 5px;
+}
+
+footer #rights {
+    float: right;
+    width: 50%;
+    text-align: right;
+    font-size: 1.1em;
+}
+
+
+/* Стили для заголовков */
+
+.h3 {
+    padding: 15px;
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
+    font-size: 24px;
+    font-weight: bolder;
+    color: rgb(31, 31, 31);
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.h3:hover {
+    color: #EC4067;
+}
+
+.h4 {
+    color: #EC4067;
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+    font-weight: normal;
+    margin-bottom: 10px;
+}
+
+.h4:hover {
+    color: rgb(31, 31, 31);
+}
+
+
+/* Текст подписи для слайд-шоу*/
+
+.text {
+    padding: 8px 12px;
+    width: 100%;
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: rgb(31, 31, 31);
+}
+
+
+/* Стили для слайд-шоу */
+
+* {
+    box-sizing: border-box
+}
+
+
+/* Slideshow container */
+
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    left: 25%;
+    margin: auto;
+}
+
+
+/* Скрыть изображения по умолчанию */
+
+.mySlides {
+    display: none;
+}
+
+
+/* 
+Следующие и предыдущие кнопки */
+
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+}
+
+
+/*
+Расположение «следующей кнопки» вправо*/
+
+.next {
+    right: 50%;
+    border-radius: 3px 0 0 3px;
+}
+
+
+/* При наведении курсора добавляется черный фон немного прозрачный */
+
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+/* Точки / маркеры / индикаторы */
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+    background-color: #717171;
+}
+
+
+/* Затухающая анимация */
+
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+
+/* Значение .4  полупрозрачность элемента,а 0 прозрачость и 1 — его непрозрачности. */
+
+@-webkit-keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
+
+
+/* Стили для блока Создание сайтов */
+
+@media (min-width: 500px) {
+    .container-1,
+    .container-2,
+    .container-3,
+    .container-4,
+    .container-5,
+    .container-6 {
+        display: flex;
+        align-items: stretch;
+        flex-direction: row;
+    }
+}
+
+.container-1 div {
+    padding: 30px;
+    margin: 10px;
+    border: 1px solid rgb(247, 249, 252);
+    border-radius: 20px;
+    background-color: rgb(247, 249, 252);
+}
+
+.container-1 div:hover {
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+.box-1 {
+    flex: 2;
+    order: 1;
+}
+
+.box-2 {
+    flex: 2;
+    order: 2;
+}
+
+.box-3 {
+    flex: 2;
+    order: 3;
+}
+
+.box {
+    flex-basis: 50%;
+}
+
+.creation_site .button {
+    color: white;
+    text-decoration: none;
+    user-select: none;
+    background: #EC4067;
+    padding: .5em 1em;
+    outline: none;
+    display: inline-block;
+    border-width: 2px 0;
+    border-style: solid none;
+    border-color: #EC4067;
+    border-radius: 6px;
+    transition: 0.2s;
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
+    font-size: 16px;
+    font-weight: 550;
+}
+
+.creation_site .button:hover {
+    background: rgb(243, 113, 143);
+}
+
+
+/* при наведении курсора мышки */
+
+.creation_site .button:active {
+    background: rgb(243, 113, 143);
+}
+
+
+/* Стили для блока Айдентика */
+
+.container-2 div,
+.container-3 div {
+    padding: 30px;
+    margin: 20px;
+    border: 2px solid rgb(247, 249, 252);
+    background-color: rgb(247, 249, 252);
+    border-radius: 20px;
+}
+
+.container-2 div img,
+.container-3 div img {
+    width: 20%;
+    float: left;
+    margin: 10px;
+    /* Отступы вокруг картинки */
+}
+
+
+/* Стили для блока Блог */
+
+.container-4 div {
+    padding: 30px;
+    margin: 20px;
+    border-radius: 20px;
+}
+
+.box-1 {
+    border: 2px solid #EC4067;
+    background-color: #EC4067;
+}
+
+.box-2 {
+    border: 2px solid #A01A7D;
+    background-color: #A01A7D;
+}
+
+.titles_white {
+    color: white;
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-size: 25px;
+    line-height: 135%;
+    float: left;
+    font-weight: bolder;
+    margin-bottom: 2%
+}
+
+.text_white {
+    color: white;
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-size: 1em;
+    line-height: 135%;
+    float: left;
+    font-weight: 400;
+}
+
+
+/* Стили для кнопки Подробнее */
+
+.blog #more .button_1 {
+    color: black;
+    text-decoration: none;
+    user-select: none;
+    background: white;
+    padding: .4em 1.5em;
+    outline: none;
+    display: inline-block;
+    border-width: 2px 0;
+    border-style: solid none;
+    border-color: white;
+    border-radius: 6px;
+    transition: 0.2s;
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
+    font-size: 18px;
+    font-weight: 550;
+}
+
+.blog #more .button_1:hover {
+    background: black;
+    border-color: black;
+    color: white;
+}
+
+
+/* Стили для странички Услуги */
+
+#services {
+    width: 100%;
+    background: url(images/sun2.png) no-repeat;
+    -moz-background-size: 100%;
+    /* Firefox 3.6+ */
+    -webkit-background-size: 100%;
+    /* Safari 3.1+ и Chrome 4.0+ */
+    -o-background-size: 100%;
+    /* Opera 9.6+ */
+    background-size: 100%;
+}
+
+
+/* Стили для списка */
+
+ul {
+    list-style: none;
+}
+
+ul li:before {
+    content: "-";
+    position: relative;
+    left: -5px;
+}
+
+.container-5 div {
+    padding: 50px;
+    margin: 30px;
+    border: 2px solid rgb(34, 34, 34);
+    border-radius: 20px;
+    background-color: rgb(34, 34, 34);
+}
+
+.box-5 {
+    flex: 2;
+    order: 1;
+}
+
+.title {
+    padding: 5px;
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
+    font-weight: bolder;
+    color: white;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-size: 26px;
+    line-height: 1;
+}
+
+.title span {
+    color: #EC4067;
+}
+
+.text_1 {
+    padding: 15px;
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
+    font-weight: bolder;
+    color: white;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    font-size: 18px;
+    line-height: 1;
+}
+
+.text_2 {
+    padding: 5px;
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
+    font-weight: bolder;
+    color: white;
+    font-size: 16px;
+}
+
+
+/* Стили для текста в элементе Блог */
+
+.qnique_text {
+    padding: 15px;
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
+    font-size: 22px;
+    font-weight: bolder;
+    color: rgb(31, 31, 31);
+}
+
+.text_3,
+.list {
+    padding: 10px;
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
+    font-size: 18px;
+    font-weight: normal;
+    color: rgb(31, 31, 31);
+}
+
+.h5 {
+    padding: 5px;
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
+    font-size: 24px;
+    font-weight: bolder;
+    color: rgb(31, 31, 31);
+    margin-top: 20px;
+}
+
+.h5:hover {
+    color: #EC4067;
+}
